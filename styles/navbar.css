@@ -1,0 +1,215 @@
+.navbar {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc; /* Warna neon untuk logo */
+}
+
+.menu-toggle {
+    display: none; /* Sembunyikan menu toggle di desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Sembunyikan menu toggle di desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #00ffcc; /* Warna neon untuk bar */
+    margin: 4px;
+    transition: all 0.3s ease; /* Transisi untuk efek */
+}
+
+/* Kelas untuk mengubah garis menjadi X */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg); /* Putar garis pertama */
+    margin-bottom: 0; /* Hapus margin bawah */
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Sembunyikan garis kedua */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg); /* Putar garis ketiga */
+    margin-top: 0; /* Hapus margin atas */
+}
+
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Tampilkan menu toggle di mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Sembunyikan menu di mobile secara default */
+        flex-direction: column; /* Ubah menjadi kolom */
+        width: 100%;
+        background-color: #1a1a1a; /* Warna latar belakang menu */
+        position: absolute;
+        top: 60px; /* Jarak dari navbar */
+        left: 0;
+        z-index: 1;
+        transition: max-height 0.3s ease; /* Transisi untuk animasi */
+        max-height: 0; /* Sembunyikan menu */
+        overflow: hidden; /* Sembunyikan konten yang melampaui */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Tampilkan menu saat aktif */
+        max-height: 300px; /* Atur tinggi maksimum saat terbuka */
+        opacity: 1; /* Tampilkan menu dengan efek opacity */
+    }
+}
+
+/* Style untuk menu */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    position: relative; /* Untuk positioning dropdown */
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+        color: #00ffcc; /* Warna neon saat hover */
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute; /* Posisi absolut untuk dropdown */
+    background-color: #1a1a1a; /* Warna latar belakang dropdown */
+    border: 1px solid #00ffcc; /* Border neon */
+    border-radius: 5px;
+    margin-top: 10px; /* Jarak dari item menu */
+    z-index: 1; /* Pastikan dropdown di atas konten lainnya */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu li:hover .dropdown {
+    display: block; /* Tampilkan dropdown saat hover pada item menu */
+    opacity: 1;
+}
+
+.dropdown li {
+    padding: 10px; /* Padding untuk item dropdown */
+}
+
+.dropdown li a {
+    padding: 3px; /* Padding untuk link dropdown */
+    display: block; /* Membuat link dropdown menjadi blok */
+}
+
+.dropdown li a:hover {
+    background-color: #00ffcc; /* Warna latar belakang saat hover pada item dropdown */
+    color: #121212; /* Warna teks saat hover pada item dropdown */
+}
+
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Tampilkan menu toggle di mobile */
+    }
+
+    .nav-menu {
+    list-style-type: none;
+    display: none; /* Sembunyikan menu di mobile secara default */
+    flex-direction: column; /* Ubah menjadi kolom */
+    width: 100%;
+    background-color: #1a1a1a; /* Warna latar belakang menu */
+    position: absolute;
+    top: 40px; /* Jarak dari navbar */
+    left: 0;
+    z-index: 1;
+    transition: max-height 10.3s ease; /* Transisi untuk animasi */
+    max-height: 10; /* Sembunyikan menu */
+    overflow: hidden; /* Sembunyikan konten yang melampaui */
+    
+    .navbar-container {
+        padding: 10px; /* Tambahkan padding untuk navbar di mobile */
+    }
+
+    .nav-menu li a {
+        font-size: 18px; /* Ubah ukuran font untuk item menu */
+        padding: 10px; /* Tambahkan padding untuk item menu */
+    }
+}
+
+.nav-menu {
+    opacity: 0; /* Sembunyikan menu secara default */
+    transition: opacity 0.3s ease; /* Transisi untuk efek opacity */
+}
+
+.nav-menu.active {
+    display: flex; /* Tampilkan menu saat aktif */
+    max-height: 2000px; /* Atur tinggi maksimum saat terbuka */
+    opacity: 1; /* Tampilkan menu dengan efek opacity */
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute; /* Posisi absolut untuk dropdown */
+    background-color: #1a1a1a; /* Warna latar belakang dropdown */
+    border: 1px solid #00ffcc; /* Border neon */
+    border-radius: 5px;
+    margin-top: 10px; /* Jarak dari item menu */
+    z-index: 1; /* Pastikan dropdown di atas konten lainnya */
+}
+
+}
+
+    .dropdown li {
+        padding: 0.1px; /* Padding untuk item dropdown */
+    }
+}
+
+.nav-menu li:hover .dropdown {
+    display: block; /* Tampilkan dropdown saat hover pada item menu */
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    border: 1px solid #00ffcc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: #00ffcc;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

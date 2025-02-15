@@ -1,0 +1,13 @@
+.game-box {
+    background-color: #1e1e1e;
+    border: 2px solid #00ffcc; /* Warna neon */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    transition: transform 0.3s;
+}
+
+.game-box:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}

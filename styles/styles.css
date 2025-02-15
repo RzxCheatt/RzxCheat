@@ -1,0 +1,51 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #00cc99; /* Warna saat hover */
+}
+
+img { 
+  max-width: 100%;
+  height: auto;
+  display: block; /* Menghilangkan spasi bawah gambar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 10vh;
+  margin: 0;
+  
+}
+
+#background-video {
+    position: fixed; /* Memastikan video tetap di belakang */
+    top: 50%; /* Pusatkan video secara vertikal */
+    left: 50%; /* Pusatkan video secara horizontal */
+    min-width: 100%; /* Lebar minimum 100% */
+    min-height: 100%; /* Tinggi minimum 100% */
+    width: auto; /* Lebar otomatis */
+    height: auto; /* Tinggi otomatis */
+    z-index: -1; /* Pastikan video di belakang konten lainnya */
+    transform: translate(-50%, -50%); /* Pusatkan video */
+}
