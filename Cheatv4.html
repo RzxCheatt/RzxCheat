@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat V1 - Website Game</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/game-box.css">
+</head>
+<body>
+    <script>
+        // Cek apakah pengguna sudah login
+        if (!localStorage.getItem('loggedIn')) {
+            // Jika belum login, redirect ke halaman login
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <div class="container">
+        <h1>Cheat V1</h1>
+        <img src="src/V1.jpg" alt="Cheat V1">
+        <p>Untuk Membuka Anda Harus Login Yaaa... Makasihh..</p>
+        <p></p>
+        <a href="https://pastebin.com/FeqhnYg1" class="download-link">Unduh Cheat v1</a>
+    </div>
+</body>
+</html>
