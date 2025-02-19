@@ -7,22 +7,45 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/game-box.css">
+    <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
+    <div class="login-container">
+        <h1>Login untuk Akses Cheat V1</h1>
+        <form class="login-form" onsubmit="return validateLogin()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
     <script>
-        // Cek apakah pengguna sudah login
-        if (!localStorage.getItem('loggedIn')) {
-            // Jika belum login, redirect ke halaman login
-            window.location.href = 'login.html';
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Daftar username, password, dan link tujuan
+            const validCredentials = [
+                { username: "Azmi", password: "83937", link: "https://pastebin.com/4zfj9aef" },
+                { username: "Marik", password: "63837", link: "https://pastebin.com/ByhAgxAz" },
+                { username: "Rzx", password: "madep", link:"#" }
+            ];
+
+            // Cek apakah kombinasi username dan password valid
+            const user = validCredentials.find(cred => 
+                cred.username === username && cred.password === password
+            );
+
+            if (user) {
+                alert("Login Berhasil!");
+                // Redirect to the specific content based on the user
+                window.location.href = user.link; // Ganti dengan URL halaman yang ingin diakses
+                return false; // Mencegah pengiriman form
+            } else {
+                alert("Username atau Password salah!");
+                return false; // Mencegah pengiriman form
+            }
         }
     </script>
-
-    <div class="container">
-        <h1>Cheat V1</h1>
-        <img src="src/V1.jpg" alt="Cheat V1">
-        <p>Untuk Membuka Anda Harus Login Yaaa... Makasihh..</p>
-        <p></p>
-        <a href="https://pastebin.com/FeqhnYg1" class="download-link">Unduh Cheat v1</a>
-    </div>
 </body>
 </html>
