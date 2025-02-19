@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RzxCheat</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <script src="scripts/script.js">
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check credentials
+            if (username === 'Azmi' && password === '27273') {
+            if (username === 'Marik' && password === '57789') {
+                window.location.href = 'Cheatv4.html'; // Redirect to Cheatv4.html
+            } else {
+                document.getElementById('error-message').innerText = 'Username atau password salah!';
+            }
+        });
+    </script>
+</body>
+</html>
