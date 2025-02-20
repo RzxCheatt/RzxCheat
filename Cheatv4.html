@@ -10,18 +10,6 @@
     <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
-    <video autoplay muted loop id="background-video">
-        <source src="src/bg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-  <audio autoplay loop>
-    <source src="src/bg.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-    <video autoplay muted loop class="video-background">
-        <source src="src/bg1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
     <div class="login-container">
         <h1>Login Fore Code VVIP</h1>
         <form class="login-form" onsubmit="return validateLogin()">
@@ -30,8 +18,9 @@
             <button type="submit">Login</button>
         </form>
     </div>
+</video>
 
-    <script src="scripts/script.js">
+   <script src="scripts/script.js">
         function validateLogin() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
@@ -59,5 +48,13 @@
             }
         }
     </script>
+    <audio autoplay loop>
+    <source src="src/bg.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+    <video autoplay muted loop class="video-background">
+        <source src="src/bg1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </body>
 </html>
