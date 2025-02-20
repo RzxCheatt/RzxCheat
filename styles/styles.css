@@ -64,3 +64,30 @@ img {
 .title {
     animation: rainbow 7s linear infinite;
 }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Mencegah scroll */
+}
+
+.video-background {
+    position: fixed; /* Menggunakan fixed agar video tetap di belakang */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Video di belakang */
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: relative; /* Pastikan konten memiliki posisi relatif */
+    z-index: 1; /* Konten di depan video */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Memberikan jarak dari atas */
+}
